@@ -308,7 +308,7 @@ export function MediaGallerySection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center text-gray-600 mt-12 text-sm"
         >
-          Video placeholders ready for embedding YouTube, Vimeo, or custom video content
+          
         </motion.p>
       </div>
     </section>
