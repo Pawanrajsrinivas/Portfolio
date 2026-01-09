@@ -67,7 +67,7 @@ export function CinematicHero() {
               className="flex flex-wrap gap-4"
             >
               <a
-                href="#works"
+                href="#media"
                 className="group flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-black rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/50"
               >
                 <span>View My Work</span>
