@@ -48,7 +48,7 @@ export function CinematicHero() {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-400 mb-4"
             >
-              Writer & Director
+              Editor and Director
             </motion.p>
 
             <motion.p

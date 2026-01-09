@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-amber-500">R</span>AJ S
             </h3>
             <p className="text-gray-500 text-sm">
-              Journalism & Mass Communication Student | Writer & Director
+              Journalism & Mass Communication Student | Editor and Director
             </p>
           </div>
 
