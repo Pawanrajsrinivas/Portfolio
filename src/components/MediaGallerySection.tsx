@@ -9,17 +9,17 @@ export function MediaGallerySection() {
   const mediaItems = [
     {
       title: 'Ripple Effect',
-      caption: 'Exclusive look at the making of our short film',
+      caption: 'Ripple Effect is about a young girl dealing with post-abortion trauma. What’s done is done, but the guilt, fear, and silence stay with her, slowly affecting her mind and everyday life. The film shows how one moment can leave ripples that don’t fade easily.',
       videoSrc: rippleVideo,
     },
     {
       title: 'Mahasati',
-      caption: 'Journey of documenting Sati Stones heritage',
+      caption: 'Mahasati looks at sati stones and the stories behind them. Silent, ignored, and forgotten, these stones raise questions about belief, history, and the women whose lives were reduced to symbols.',
       videoSrc: mahasatiVideo,
     },
     {
       title: 'Gun Fight',
-      caption: 'Action short film excerpt',
+      caption: 'Gun Fight is a duel-based shot animation with rising tension, ending with the powerful entry of Thalaiva. Stylish, raw, and made for impact.',
       videoSrc: gunFightVideo,
     },
   ];

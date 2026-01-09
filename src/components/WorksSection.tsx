@@ -14,7 +14,7 @@ export function WorksSection() {
       title: 'Ripple Effect',
       role: 'Writer & Director',
       description:
-        'A compelling short film exploring the cascading consequences of our choices. From conceptualizing the narrative to scripting and directing the entire production, this project showcases my ability to translate ideas into powerful visual stories.',
+        'Ripple Effect is about a young girl dealing with post-abortion trauma. What’s done is done, but the guilt, fear, and silence stay with her, slowly affecting her mind and everyday life. The film shows how one moment can leave ripples that don’t fade easily.',
       category: 'Short Film',
       image: rippleImg,
       videoHref: 'https://drive.google.com/file/d/1GfsjX4oc3R0dyDQNEy18gZWG6jsDo4RB/view',
