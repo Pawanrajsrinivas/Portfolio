@@ -22,17 +22,6 @@ export function CinematicHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-block mb-4 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full"
-            >
-              <span className="text-amber-500 text-sm tracking-wide">
-                Journalism & Mass Communication
-              </span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +37,7 @@ export function CinematicHero() {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-400 mb-4"
             >
-              Editor and Director
+              Journalism & Mass Communication
             </motion.p>
 
             <motion.p
@@ -57,7 +46,7 @@ export function CinematicHero() {
               transition={{ delay: 0.5 }}
               className="text-gray-400 text-lg mb-8 leading-relaxed max-w-xl"
             >
-              Crafting compelling narratives through the lens of storytelling, filmmaking, and visual media.
+              from creating stories on screen to creating experiences on the ground, i bring ideas to life
             </motion.p>
 
             <motion.div

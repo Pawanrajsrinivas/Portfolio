@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-amber-500">R</span>AJ S
             </h3>
             <p className="text-gray-500 text-sm">
-              Journalism & Mass Communication Student | Editor and Director
+              Journalism & Mass Communication
             </p>
           </div>
 
@@ -24,7 +24,6 @@ export function Footer() {
             </h4>
             <div className="space-y-2 text-gray-500 text-sm">
               <p>pawanrajsrinivas@gmail.com</p>
-              <p>+91-9606337682</p>
               <p>Yelahanka, Bengaluru</p>
             </div>
           </div>

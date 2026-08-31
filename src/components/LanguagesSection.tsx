@@ -41,7 +41,7 @@ export function LanguagesSection() {
           <h2 className="text-4xl md:text-5xl text-white mb-4">Languages</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-blue-500 mx-auto" />
           <p className="text-gray-400 mt-4">
-            Multilingual storyteller with proficiency in multiple Indian languages
+            mulitlingual communicator with proficiency across indian languages.
           </p>
         </motion.div>
 
@@ -53,66 +53,62 @@ export function LanguagesSection() {
             const gradientId = `gradient-${index}`;
 
             return (
-              
-            <motion.div
-              key={language.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative"
-            >
-              {/* Circular Progress */}
-              <div className="relative w-32 h-32 mx-auto mb-4">
-                {/* Background circle */}
-                <svg className="w-full h-full transform -rotate-90 block" viewBox="0 0 128 128" preserveAspectRatio="xMidYMid meet">
-                  <circle
-                    cx={64}
-                    cy={64}
-                    r={r}
-                    stroke="rgba(255,255,255,0.1)"
-                    strokeWidth="8"
-                    fill="none"
-                  />
-                  {/* Progress circle */}
-                  <motion.circle
-                    cx={64}
-                    cy={64}
-                    r={r}
-                    stroke={`url(#${gradientId})`}
-                    strokeWidth="8"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeDasharray={circumference}
-                    initial={{ strokeDashoffset: circumference }}
-                    animate={
-                      isInView
-                        ? {
-                            strokeDashoffset: circumference * (1 - language.proficiency / 100),
-                          }
-                        : {}
-                    }
-                    transition={{ duration: 1.5, delay: index * 0.1 + 0.5 }}
-                  />
-                  <defs>
-                    <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#f59e0b" />
-                      <stop offset="100%" stopColor="#3b82f6" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+              <motion.div
+                key={language.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative"
+              >
+                {/* Circular Progress */}
+                <div className="relative w-32 h-32 mx-auto">
+                  {/* Background circle */}
+                  <svg className="w-full h-full transform -rotate-90 block" viewBox="0 0 128 128" preserveAspectRatio="xMidYMid meet">
+                    <circle
+                      cx={64}
+                      cy={64}
+                      r={r}
+                      stroke="rgba(255,255,255,0.1)"
+                      strokeWidth="8"
+                      fill="none"
+                    />
+                    {/* Progress circle */}
+                    <motion.circle
+                      cx={64}
+                      cy={64}
+                      r={r}
+                      stroke={`url(#${gradientId})`}
+                      strokeWidth="8"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeDasharray={circumference}
+                      initial={{ strokeDashoffset: circumference }}
+                      animate={
+                        isInView
+                          ? {
+                              strokeDashoffset: circumference * (1 - language.proficiency / 100),
+                            }
+                          : {}
+                      }
+                      transition={{ duration: 1.5, delay: index * 0.1 + 0.5 }}
+                    />
+                    <defs>
+                      <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#f59e0b" />
+                        <stop offset="100%" stopColor="#3b82f6" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
 
-                {/* Center text */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-2xl text-white">
-                    {language.proficiency}%
-                  </span>
+                  {/* Center text */}
+                  <div className="absolute inset-0 flex items-center justify-center p-2 text-center">
+                    <span className="text-lg font-medium text-white tracking-wide">
+                      {language.name}
+                    </span>
+                  </div>
                 </div>
-              </div>
-
-              {/* Language Name */}
-              <h3 className="text-center text-white">{language.name}</h3>
-            </motion.div>
-          );
+              </motion.div>
+            );
           })}
         </div>
       </div>

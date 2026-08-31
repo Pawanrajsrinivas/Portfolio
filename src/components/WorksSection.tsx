@@ -117,21 +117,24 @@ export function WorksSection() {
                   </p>
 
                   <div className="flex items-center gap-4">
-                    {project.videoHref && (
-                      <a
-                        href={project.videoHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`group flex items-center gap-2 text-sm text-white px-4 py-2 border border-white/10 rounded-lg transition-all duration-300 ${colors.button}`}
-                        aria-label={`View video for ${project.title}`}
-                      >
-                        <span>View Video</span>
-                        <ArrowRight
-                          size={16}
-                          className="group-hover:translate-x-1 transition-transform"
-                        />
-                      </a>
-                    )}
+                    <a
+                      href="#media"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.querySelector('#media');
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                      className={`group flex items-center gap-2 text-sm text-white px-4 py-2 border border-white/10 rounded-lg transition-all duration-300 ${colors.button}`}
+                      aria-label={`View video for ${project.title}`}
+                    >
+                      <span>View Video</span>
+                      <ArrowRight
+                        size={16}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
+                    </a>
                   </div>
                 </div>
               </motion.div>

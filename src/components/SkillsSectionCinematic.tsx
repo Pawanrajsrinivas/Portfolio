@@ -119,9 +119,8 @@ export function SkillsSectionCinematic() {
                 <div className="space-y-5">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skill.name}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-300 text-sm">{skill.name}</span>
-                        <span className="text-gray-500 text-xs">{skill.level}%</span>
+                      <div className="mb-2">
+                        <span className="text-gray-300 text-sm font-bold">{skill.name}</span>
                       </div>
                       <div className="h-2 bg-white/5 rounded-full overflow-hidden">
                         <motion.div

@@ -9,6 +9,20 @@ export function ExperienceSection() {
 
   const experiences = [
     {
+      event: 'Sideways 6',
+      role: 'Event Manager',
+      date: '2026',
+      location: 'Bengaluru',
+      responsibilities: [
+        'Managed event operations and on-ground coordination',
+        'Coordinated teams, schedules, and event activities',
+        'Handled guest and participant coordination',
+        'Ensured smooth execution of events and activities',
+        'Managed on-ground issues and assisted with quick problem-solving',
+      ],
+      icon: '🎯',
+    },
+    {
       event: 'Bengaluru International Film Festival 2025',
       role: 'Volunteer',
       date: '2025',

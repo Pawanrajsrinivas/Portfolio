@@ -3,7 +3,6 @@ import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import {
   Mail,
-  Phone,
   MapPin,
   Send,
   Linkedin,
@@ -58,12 +57,6 @@ export function ContactSectionCinematic() {
       href: 'mailto:pawanrajsrinivas@gmail.com',
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: '+91-9606337682',
-      href: 'tel:+919606337682',
-    },
-    {
       icon: MapPin,
       label: 'Location',
       value: 'Yelahanka, Bengaluru',
@@ -74,7 +67,7 @@ export function ContactSectionCinematic() {
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/in/pawan-raj-srinivas-940511292?trk=contact-info', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://www.instagram.com/pawanrajsrinivas', label: 'Instagram' },
-    { icon: Twitter, href: 'https://x.com/prs_018?s=21', label: 'X' },
+    { icon: Twitter, href: 'https://x.com/prsspeaks', label: 'X' },
     { icon: Github, href: 'https://github.com/Pawanrajsrinivas', label: 'GitHub' },
   ];
 
