@@ -4,7 +4,7 @@ import { Play, Video, ArrowLeft } from 'lucide-react';
 import rippleVideo from '../../assets/Videos/ripple-effect.mp4';
 import mahasatiVideo from '../../assets/Videos/mahasati.mp4';
 import gunFightVideo from '../../assets/Videos/gun-fight.mp4';
-import animationVideo from '../../assets/Videos/First Animation .mp4';
+import animationVideo from '../../assets/Videos/First-Animation .mp4';
 
 export function MediaGallerySection() {
   const mediaItems = [
