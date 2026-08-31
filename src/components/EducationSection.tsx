@@ -9,11 +9,11 @@ export function EducationSection() {
 
   const education = [
     {
-      degree: 'BA Journalism & Mass Communication',
-      institution: 'Reva University',
+      degree: 'MA Communication & Journalism ',
+      institution: 'REVA University ',
       location: 'Bangalore',
-      period: '2023 – 2026',
-      status: 'Completed',
+      period: '2026-present',
+      status: 'Ongoing',
       icon: GraduationCap,
       color: 'amber',
     },
