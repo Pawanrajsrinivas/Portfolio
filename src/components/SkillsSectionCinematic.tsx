@@ -13,9 +13,9 @@ export function SkillsSectionCinematic() {
       title: 'Creative Skills',
       color: 'amber',
       skills: [
-        { name: 'Content Writing', level: 90 },
-        { name: 'Short Film Production', level: 85 },
-        { name: 'Documentary Production', level: 85 },
+        { name: 'Content Writing' },
+        { name: 'Short Film Production' },
+        { name: 'Documentary Production' },
       ],
     },
     {
@@ -23,10 +23,10 @@ export function SkillsSectionCinematic() {
       title: 'Technical Tools',
       color: 'blue',
       skills: [
-        { name: 'Adobe Premiere Pro', level: 88 },
-        { name: 'Adobe Photoshop', level: 82 },
-        { name: 'Adobe After Effects', level: 80 },
-        { name: 'Adobe Animate', level: 75 },
+        { name: 'Adobe Premiere Pro' },
+        { name: 'Adobe Photoshop' },
+        { name: 'Adobe After Effects' },
+        { name: 'Adobe Animate' },
       ],
     },
     {
@@ -34,8 +34,8 @@ export function SkillsSectionCinematic() {
       title: 'Professional Skills',
       color: 'purple',
       skills: [
-        { name: 'Event Management', level: 85 },
-        { name: 'Crowd & Venue Coordination', level: 88 },
+        { name: 'Event Management' },
+        { name: 'Crowd & Venue Coordination' },
       ],
     },
   ];
@@ -46,21 +46,21 @@ export function SkillsSectionCinematic() {
         icon: 'text-amber-500',
         bg: 'bg-amber-500/10',
         border: 'border-amber-500/30',
-        tagHover: 'hover:border-amber-500/40 hover:bg-amber-500/10 hover:text-amber-300',
+        tagHover: 'hover:border-amber-500/60 hover:bg-amber-500/15 hover:shadow-[0_0_15px_rgba(245,158,11,0.2)]',
         dot: 'bg-amber-500',
       },
       blue: {
         icon: 'text-blue-500',
         bg: 'bg-blue-500/10',
         border: 'border-blue-500/30',
-        tagHover: 'hover:border-blue-500/40 hover:bg-blue-500/10 hover:text-blue-300',
+        tagHover: 'hover:border-blue-500/60 hover:bg-blue-500/15 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]',
         dot: 'bg-blue-500',
       },
       purple: {
         icon: 'text-purple-500',
         bg: 'bg-purple-500/10',
         border: 'border-purple-500/30',
-        tagHover: 'hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-purple-300',
+        tagHover: 'hover:border-purple-500/60 hover:bg-purple-500/15 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]',
         dot: 'bg-purple-500',
       },
     };
@@ -92,7 +92,7 @@ export function SkillsSectionCinematic() {
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-blue-500 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
           {skillCategories.map((category, categoryIndex) => {
             const colors = getColorClasses(category.color);
             const Icon = category.icon;
@@ -103,38 +103,36 @@ export function SkillsSectionCinematic() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 flex flex-col justify-between"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:border-white/20 transition-all duration-300 flex flex-col justify-start h-full"
               >
-                <div>
-                  {/* Category Header */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <div
-                      className={`p-3 ${colors.bg} border ${colors.border} rounded-lg`}
-                    >
-                      <Icon className={colors.icon} size={24} />
-                    </div>
-                    <h3 className="text-xl text-white font-semibold">{category.title}</h3>
+                {/* Category Header */}
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+                  <div
+                    className={`p-3 ${colors.bg} border ${colors.border} rounded-xl`}
+                  >
+                    <Icon className={colors.icon} size={24} />
                   </div>
+                  <h3 className="text-xl text-white font-bold tracking-wide">{category.title}</h3>
+                </div>
 
-                  {/* Skills Tags */}
-                  <div className="flex flex-wrap gap-3">
-                    {category.skills.map((skill, skillIndex) => (
-                      <motion.div
-                        key={skill.name}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{
-                          duration: 0.4,
-                          delay: categoryIndex * 0.15 + skillIndex * 0.08,
-                        }}
-                        whileHover={{ y: -3, scale: 1.02 }}
-                        className={`px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 ${colors.tagHover} text-gray-200 text-sm font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 cursor-default shadow-sm`}
-                      >
-                        <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
-                        <span>{skill.name}</span>
-                      </motion.div>
-                    ))}
-                  </div>
+                {/* Skills Tags List */}
+                <div className="flex flex-wrap gap-3.5">
+                  {category.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skill.name}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{
+                        duration: 0.4,
+                        delay: categoryIndex * 0.15 + skillIndex * 0.08,
+                      }}
+                      whileHover={{ y: -2 }}
+                      className={`px-4 py-3 rounded-xl bg-zinc-900/90 border border-white/20 ${colors.tagHover} text-white font-semibold text-sm md:text-base tracking-wide transition-all duration-300 flex items-center gap-3 shadow-md cursor-default`}
+                    >
+                      <span className={`w-2 h-2 rounded-full ${colors.dot} flex-shrink-0`} />
+                      <span className="text-white font-semibold">{skill.name}</span>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
             );

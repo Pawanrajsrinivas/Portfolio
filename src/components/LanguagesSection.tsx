@@ -53,12 +53,12 @@ export function LanguagesSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-amber-500/40 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-blue-500/10 rounded-2xl p-6 text-center transition-all duration-300 group cursor-default shadow-sm hover:shadow-amber-500/10"
+              whileHover={{ y: -3, scale: 1.02 }}
+              className="bg-zinc-900/90 backdrop-blur-sm border border-white/20 hover:border-amber-500/60 hover:bg-gradient-to-r hover:from-amber-500/15 hover:to-blue-500/15 rounded-2xl p-6 text-center transition-all duration-300 group cursor-default shadow-md hover:shadow-[0_0_20px_rgba(245,158,11,0.2)]"
             >
               <div className="flex items-center justify-center gap-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-amber-500 to-blue-500 group-hover:scale-125 transition-transform duration-300" />
-                <h3 className="text-xl font-semibold text-white tracking-wide group-hover:text-amber-400 transition-colors">
+                <h3 className="text-xl font-bold text-white tracking-wide group-hover:text-amber-300 transition-colors">
                   {language.name}
                 </h3>
               </div>
