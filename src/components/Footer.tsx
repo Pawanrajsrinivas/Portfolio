@@ -12,9 +12,20 @@ export function Footer() {
               <span className="text-amber-500">P</span>AWAN{' '}
               <span className="text-amber-500">R</span>AJ S
             </h3>
-            <p className="text-gray-500 text-sm">
-              director , editor , event manger
-            </p>
+            <ul className="space-y-1.5 text-gray-500 text-sm">
+              <li className="flex items-center gap-2">
+                <span className="text-amber-500">•</span>
+                <span>Director</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-amber-500">•</span>
+                <span>Editor</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-amber-500">•</span>
+                <span>Event Manager</span>
+              </li>
+            </ul>
           </div>
 
           {/* Contact */}
