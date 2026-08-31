@@ -4,6 +4,7 @@ import { Play, Video, ArrowLeft } from 'lucide-react';
 import rippleVideo from '../../assets/Videos/ripple-effect.mp4';
 import mahasatiVideo from '../../assets/Videos/mahasati.mp4';
 import gunFightVideo from '../../assets/Videos/gun-fight.mp4';
+import animationVideo from '../../assets/Videos/First Animation .mp4';
 
 export function MediaGallerySection() {
   const mediaItems = [
@@ -21,6 +22,11 @@ export function MediaGallerySection() {
       title: 'Gun Fight',
       caption: 'Gun Fight is a duel-based shot animation with rising tension, ending with the powerful entry of Thalaiva. Stylish, raw, and made for impact.',
       videoSrc: gunFightVideo,
+    },
+    {
+      title: 'Animation',
+      caption: 'A 2D character animation sequence showcasing dynamic movement, expressive character acting, and frame-by-frame motion.',
+      videoSrc: animationVideo,
     },
   ];
 
@@ -173,7 +179,7 @@ export function MediaGallerySection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {mediaItems.map((item, index) => (
             <motion.div
               key={item.title}
