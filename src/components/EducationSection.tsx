@@ -9,15 +9,6 @@ export function EducationSection() {
 
   const education = [
     {
-      degree: 'MA Communication & Journalism ',
-      institution: 'REVA University ',
-      location: 'Bangalore',
-      period: '2026-present',
-      status: 'Ongoing',
-      icon: GraduationCap,
-      color: 'amber',
-    },
-    {
       degree: '12th Grade – Arts (HEPP)',
       institution: 'Reva PU College',
       location: 'Bangalore',
@@ -25,6 +16,24 @@ export function EducationSection() {
       status: 'Completed',
       icon: BookOpen,
       color: 'blue',
+    },
+    {
+      degree: 'BA Journalism & Mass Communication',
+      institution: 'REVA University',
+      location: 'Bangalore',
+      period: '2023 – 2026',
+      status: 'Completed',
+      icon: GraduationCap,
+      color: 'amber',
+    },
+    {
+      degree: 'MA Communication and Journalism',
+      institution: 'REVA University',
+      location: 'Bangalore',
+      period: '2026 – Present',
+      status: 'Currently Pursuing',
+      icon: GraduationCap,
+      color: 'purple',
     },
   ];
 
@@ -42,8 +51,14 @@ export function EducationSection() {
         border: 'border-blue-500/30',
         badge: 'bg-blue-500/20 text-blue-400',
       },
+      purple: {
+        icon: 'text-purple-500',
+        bg: 'bg-purple-500/10',
+        border: 'border-purple-500/30',
+        badge: 'bg-purple-500/20 text-purple-400',
+      },
     };
-    return colors[color as keyof typeof colors];
+    return colors[color as keyof typeof colors] || colors.amber;
   };
 
   return (
@@ -72,7 +87,7 @@ export function EducationSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-blue-500 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {education.map((edu, index) => {
             const colors = getColorClasses(edu.color);
             const Icon = edu.icon;

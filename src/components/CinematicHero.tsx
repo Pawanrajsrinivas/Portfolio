@@ -31,14 +31,18 @@ export function CinematicHero() {
               <span className="text-amber-500">P</span>AWAN <span className="text-amber-500">R</span>AJ <span className="text-amber-500">S</span>
             </motion.h1>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-gray-400 mb-4"
+              className="flex flex-wrap items-center gap-2.5 md:gap-3 text-xl md:text-2xl text-gray-300 mb-4 font-medium"
             >
-              Director Editor & Event Manager
-            </motion.p>
+              <span>Director</span>
+              <span className="text-amber-500 text-sm md:text-base">•</span>
+              <span>Editor</span>
+              <span className="text-amber-500 text-sm md:text-base">•</span>
+              <span>Event Manager</span>
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}

@@ -116,7 +116,7 @@ export function SkillsSectionCinematic() {
                 </div>
 
                 {/* Skills Tags List */}
-                <div className="flex flex-wrap gap-3.5">
+                <div className="flex flex-wrap gap-4 md:gap-5">
                   {category.skills.map((skill, skillIndex) => (
                     <motion.div
                       key={skill.name}
