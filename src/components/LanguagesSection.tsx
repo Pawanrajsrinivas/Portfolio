@@ -47,69 +47,23 @@ export function LanguagesSection() {
 
         {/* Languages Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {languages.map((language, index) => {
-            const r = 56;
-            const circumference = 2 * Math.PI * r;
-            const gradientId = `gradient-${index}`;
-
-            return (
-              <motion.div
-                key={language.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
-              >
-                {/* Circular Progress */}
-                <div className="relative w-32 h-32 mx-auto">
-                  {/* Background circle */}
-                  <svg className="w-full h-full transform -rotate-90 block" viewBox="0 0 128 128" preserveAspectRatio="xMidYMid meet">
-                    <circle
-                      cx={64}
-                      cy={64}
-                      r={r}
-                      stroke="rgba(255,255,255,0.1)"
-                      strokeWidth="8"
-                      fill="none"
-                    />
-                    {/* Progress circle */}
-                    <motion.circle
-                      cx={64}
-                      cy={64}
-                      r={r}
-                      stroke={`url(#${gradientId})`}
-                      strokeWidth="8"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeDasharray={circumference}
-                      initial={{ strokeDashoffset: circumference }}
-                      animate={
-                        isInView
-                          ? {
-                              strokeDashoffset: circumference * (1 - language.proficiency / 100),
-                            }
-                          : {}
-                      }
-                      transition={{ duration: 1.5, delay: index * 0.1 + 0.5 }}
-                    />
-                    <defs>
-                      <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#f59e0b" />
-                        <stop offset="100%" stopColor="#3b82f6" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-
-                  {/* Center text */}
-                  <div className="absolute inset-0 flex items-center justify-center p-2 text-center">
-                    <span className="text-lg font-medium text-white tracking-wide">
-                      {language.name}
-                    </span>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+          {languages.map((language, index) => (
+            <motion.div
+              key={language.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-amber-500/40 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-blue-500/10 rounded-2xl p-6 text-center transition-all duration-300 group cursor-default shadow-sm hover:shadow-amber-500/10"
+            >
+              <div className="flex items-center justify-center gap-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-amber-500 to-blue-500 group-hover:scale-125 transition-transform duration-300" />
+                <h3 className="text-xl font-semibold text-white tracking-wide group-hover:text-amber-400 transition-colors">
+                  {language.name}
+                </h3>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

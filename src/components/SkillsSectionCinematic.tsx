@@ -46,22 +46,22 @@ export function SkillsSectionCinematic() {
         icon: 'text-amber-500',
         bg: 'bg-amber-500/10',
         border: 'border-amber-500/30',
-        gradient: 'from-amber-500',
-        bar: 'bg-gradient-to-r from-amber-500 to-amber-600',
+        tagHover: 'hover:border-amber-500/40 hover:bg-amber-500/10 hover:text-amber-300',
+        dot: 'bg-amber-500',
       },
       blue: {
         icon: 'text-blue-500',
         bg: 'bg-blue-500/10',
         border: 'border-blue-500/30',
-        gradient: 'from-blue-500',
-        bar: 'bg-gradient-to-r from-blue-500 to-blue-600',
+        tagHover: 'hover:border-blue-500/40 hover:bg-blue-500/10 hover:text-blue-300',
+        dot: 'bg-blue-500',
       },
       purple: {
         icon: 'text-purple-500',
         bg: 'bg-purple-500/10',
         border: 'border-purple-500/30',
-        gradient: 'from-purple-500',
-        bar: 'bg-gradient-to-r from-purple-500 to-purple-600',
+        tagHover: 'hover:border-purple-500/40 hover:bg-purple-500/10 hover:text-purple-300',
+        dot: 'bg-purple-500',
       },
     };
     return colors[color as keyof typeof colors];
@@ -103,39 +103,38 @@ export function SkillsSectionCinematic() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 flex flex-col justify-between"
               >
-                {/* Category Header */}
-                <div className="flex items-center gap-3 mb-6">
-                  <div
-                    className={`p-3 ${colors.bg} border ${colors.border} rounded-lg`}
-                  >
-                    <Icon className={colors.icon} size={24} />
-                  </div>
-                  <h3 className="text-xl text-white">{category.title}</h3>
-                </div>
-
-                {/* Skills List */}
-                <div className="space-y-5">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skill.name}>
-                      <div className="mb-2">
-                        <span className="text-gray-300 text-sm font-bold">{skill.name}</span>
-                      </div>
-                      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={isInView ? { width: `${skill.level}%` } : {}}
-                          transition={{
-                            duration: 1,
-                            delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.5,
-                            ease: 'easeOut',
-                          }}
-                          className={`h-full ${colors.bar} rounded-full`}
-                        />
-                      </div>
+                <div>
+                  {/* Category Header */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div
+                      className={`p-3 ${colors.bg} border ${colors.border} rounded-lg`}
+                    >
+                      <Icon className={colors.icon} size={24} />
                     </div>
-                  ))}
+                    <h3 className="text-xl text-white font-semibold">{category.title}</h3>
+                  </div>
+
+                  {/* Skills Tags */}
+                  <div className="flex flex-wrap gap-3">
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                        transition={{
+                          duration: 0.4,
+                          delay: categoryIndex * 0.15 + skillIndex * 0.08,
+                        }}
+                        whileHover={{ y: -3, scale: 1.02 }}
+                        className={`px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 ${colors.tagHover} text-gray-200 text-sm font-semibold tracking-wide transition-all duration-300 flex items-center gap-2 cursor-default shadow-sm`}
+                      >
+                        <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
+                        <span>{skill.name}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             );
