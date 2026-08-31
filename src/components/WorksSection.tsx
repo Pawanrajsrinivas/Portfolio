@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { Film, ArrowRight } from 'lucide-react';
 import rippleImg from '../../assets/thumbnail/ripple-effect.png';
 import mahasatiImg from '../../assets/thumbnail/Mahasati.png';
+import runImg from '../../assets/thumbnail/Run.png';
 
 export function WorksSection() {
   const ref = useRef(null);
@@ -27,8 +28,18 @@ export function WorksSection() {
         'An in-depth documentary examining the cultural and historical relevance of Sati Stones. This project demonstrates my commitment to preserving important narratives and exploring sensitive topics with respect and authenticity.',
       category: 'Documentary',
       image: mahasatiImg,
-      videoHref: 'https://drive.google.com/file/d/1jA57qb0W3rEu_HWipGt9rdCgnNmeOn3l/view',
+      videoHref: 'https://drive.google.com/file/d/1riFqsXq9GAtGIsmqN069jsw3z-eMVTVR/view',
       color: 'blue',
+    },
+    {
+      title: 'Run',
+      role: 'Editor & DOP',
+      description:
+        'A compelling short film exploring narrative storytelling, dynamic camera work, and comprehensive post-production editing.',
+      category: 'Short Film',
+      image: runImg,
+      videoHref: 'https://drive.google.com/file/d/12NM2VNNSN2qdzkPcZQQTc-Smtd7YV5-Z/view',
+      color: 'purple',
     },
   ];
 
@@ -44,8 +55,13 @@ export function WorksSection() {
         button: 'hover:bg-blue-500/10 hover:border-blue-500/50',
         gradient: 'from-blue-500/20',
       },
+      purple: {
+        badge: 'bg-purple-500/10 text-purple-500 border-purple-500/30',
+        button: 'hover:bg-purple-500/10 hover:border-purple-500/50',
+        gradient: 'from-purple-500/20',
+      },
     };
-    return colors[color as keyof typeof colors];
+    return colors[color as keyof typeof colors] || colors.amber;
   };
 
   return (
@@ -75,7 +91,7 @@ export function WorksSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-blue-500 mx-auto" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => {
             const colors = getColorClasses(project.color);
 
@@ -85,56 +101,57 @@ export function WorksSection() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
+                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Project Image */}
-                <div className="relative h-64 overflow-hidden">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} to-transparent opacity-50 z-10`}
-                  />
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 left-4 z-20">
-                    <span
-                      className={`px-3 py-1 text-xs border rounded-full backdrop-blur-sm ${colors.badge}`}
-                    >
-                      {project.category}
-                    </span>
+                <div>
+                  <div className="relative h-64 overflow-hidden">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} to-transparent opacity-50 z-10`}
+                    />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 left-4 z-20">
+                      <span
+                        className={`px-3 py-1 text-xs border rounded-full backdrop-blur-sm ${colors.badge}`}
+                      >
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Project Info */}
+                  <div className="p-6">
+                    <div className="mb-2">
+                      <span className="text-gray-500 text-sm">{project.role}</span>
+                    </div>
+                    <h3 className="text-2xl text-white mb-3">{project.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
 
-                {/* Project Info */}
-                <div className="p-6">
-                  <div className="mb-2">
-                    <span className="text-gray-500 text-sm">{project.role}</span>
-                  </div>
-                  <h3 className="text-2xl text-white mb-3">{project.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-
+                <div className="p-6 pt-0">
                   <div className="flex items-center gap-4">
-                    <a
-                      href="#media"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.querySelector('#media');
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
-                      className={`group flex items-center gap-2 text-sm text-white px-4 py-2 border border-white/10 rounded-lg transition-all duration-300 ${colors.button}`}
-                      aria-label={`View video for ${project.title}`}
-                    >
-                      <span>View Video</span>
-                      <ArrowRight
-                        size={16}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
-                    </a>
+                    {project.videoHref && (
+                      <a
+                        href={project.videoHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`group flex items-center gap-2 text-sm text-white px-4 py-2 border border-white/10 rounded-lg transition-all duration-300 ${colors.button}`}
+                        aria-label={`View video for ${project.title}`}
+                      >
+                        <span>View Video</span>
+                        <ArrowRight
+                          size={16}
+                          className="group-hover:translate-x-1 transition-transform"
+                        />
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
