@@ -10,7 +10,7 @@ export function EducationSection() {
   const education = [
     {
       degree: '12th Grade – Arts (HEPP)',
-      institution: 'Reva PU College',
+      institution: 'REVA University',
       location: 'Bangalore',
       period: '2022 – 2023',
       status: 'Completed',
