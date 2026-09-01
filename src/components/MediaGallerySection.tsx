@@ -5,10 +5,10 @@ import rippleVideo from '../../assets/Videos/ripple-effect.mp4';
 import mahasatiVideo from '../../assets/Videos/mahasati.mp4';
 import gunFightVideo from '../../assets/Videos/gun-fight.mp4';
 import animationVideo from '../../assets/Videos/First-Animation.mp4';
-import rippleThumbnail from '../assets/thumbnail/ripple-effect.png';
-import mahasatiThumbnail from '../assets/thumbnail/Mahasati.png';
-import gunFightThumbnail from '../assets/thumbnail/Gunfight.png';
-import animationThumbnail from '../assets/thumbnail/BALL ANIMATION.PNG';
+import rippleThumbnail from '../../assets/thumbnail/ripple-effect.png';
+import mahasatiThumbnail from '../../assets/thumbnail/Mahasati.png';
+import gunFightThumbnail from '../../assets/thumbnail/Gunfight.png';
+import animationThumbnail from '../../assets/thumbnail/BALL ANIMATION.PNG';
 
 export function MediaGallerySection() {
   const mediaItems = [
