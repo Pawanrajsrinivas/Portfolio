@@ -96,14 +96,14 @@ export function CinematicHero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[3/4] max-w-md mx-auto">
+            <div className="relative rounded-2xl overflow-hidden aspect-[3/4] w-full max-w-[280px] md:max-w-md mx-auto">
               {/* Image placeholder with border */}
               <div className="absolute inset-0 border-2 border-amber-500/30 rounded-2xl z-10 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-blue-500/20 z-10 pointer-events-none" />
               
               <img
                 src={profileImg}
-                alt="Pawan Raj S - Profile"
+                alt="Pawan Raj Srinivas"
                 className="w-full h-full object-cover"
               />
 
