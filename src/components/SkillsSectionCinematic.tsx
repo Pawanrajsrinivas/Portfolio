@@ -14,9 +14,10 @@ export function SkillsSectionCinematic() {
       color: 'amber',
       skills: [
         { name: 'Directing' },
-        { name: 'Editing ' },
-        { name: 'Script & Screenplay Writing' },
+        { name: 'Editing' },
+        { name: 'Content Writing' },
         { name: 'Color Grading' },
+        { name: 'Script & Screenplay Writing' },
         { name: 'Short Film Production' },
         { name: 'Documentary Production' },
       ],
