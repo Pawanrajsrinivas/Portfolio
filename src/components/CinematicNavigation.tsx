@@ -54,8 +54,7 @@ export function CinematicNavigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-amber-500 text-2xl font-bold">PRS</span>{' '}
-              
+            <span className="text-3xl font-bold tracking-[0.25em] text-amber-500">PRS</span>{' '}
             </motion.a>
 
             {/* Desktop Navigation */}
