@@ -62,9 +62,7 @@ export function Footer() {
         <div className="pt-8 border-t border-white/5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm flex items-center gap-2">
-              Designed & built with{' '}
-              <Heart className="text-red-500" size={14} fill="currentColor" /> by Pawan
-              Raj S
+              Designed & built by Lohith Sai
             </p>
             <p className="text-gray-600 text-sm">
               © {new Date().getFullYear()} All rights reserved
