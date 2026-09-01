@@ -20,7 +20,7 @@ export function LanguagesSection() {
     <section
       id="languages"
       ref={ref}
-      className="py-24 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden"
+      className="py-12 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 opacity-5">
@@ -41,7 +41,7 @@ export function LanguagesSection() {
           <h2 className="text-4xl md:text-5xl text-white mb-4">Languages</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-blue-500 mx-auto" />
           <p className="text-gray-400 mt-4">
-            mulitlingual communicator with proficiency across indian languages.
+            Mulitlingual communicator with proficiency across indian languages.
           </p>
         </motion.div>
 
