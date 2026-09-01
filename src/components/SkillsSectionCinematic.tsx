@@ -18,8 +18,7 @@ export function SkillsSectionCinematic() {
         { name: 'Content Writing' },
         { name: 'Color Grading' },
         { name: 'Script & Screenplay Writing' },
-        { name: 'Short Film Production' },
-        { name: 'Documentary Production' },
+        { name: 'Short Film & Documentary Production' },
       ],
     },
     {
