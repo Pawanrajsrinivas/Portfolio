@@ -5,6 +5,10 @@ import rippleVideo from '../../assets/Videos/ripple-effect.mp4';
 import mahasatiVideo from '../../assets/Videos/mahasati.mp4';
 import gunFightVideo from '../../assets/Videos/gun-fight.mp4';
 import animationVideo from '../../assets/Videos/First-Animation.mp4';
+import rippleThumbnail from '../assets/thumbnail/ripple-effect.png';
+import mahasatiThumbnail from '../assets/thumbnail/Mahasati.png';
+import gunFightThumbnail from '../assets/thumbnail/Gunfight.png';
+import animationThumbnail from '../assets/thumbnail/BALL ANIMATION.PNG';
 
 export function MediaGallerySection() {
   const mediaItems = [
@@ -12,21 +16,25 @@ export function MediaGallerySection() {
       title: 'Ripple Effect',
       caption: 'Ripple Effect is about a young girl dealing with post-abortion trauma. What’s done is done, but the guilt, fear, and silence stay with her, slowly affecting her mind and everyday life. The film shows how one moment can leave ripples that don’t fade easily.',
       videoSrc: rippleVideo,
+      thumbnail: rippleThumbnail,
     },
     {
       title: 'Mahasati',
       caption: 'Mahasati looks at sati stones and the stories behind them. Silent, ignored, and forgotten, these stones raise questions about belief, history, and the women whose lives were reduced to symbols.',
       videoSrc: mahasatiVideo,
+      thumbnail: mahasatiThumbnail,
     },
     {
       title: 'Gun Fight',
-      caption: 'Gun Fight is a duel-based shot animation with rising tension, ending with the powerful entry of Thalaiva. Stylish, raw, and made for impact.',
+      caption: 'Gun Fight is a duel-based shot animation with rising tension, ending with the powerful entry of Thalaiva.',
       videoSrc: gunFightVideo,
+       thumbnail: gunFightThumbnail,
     },
     {
-      title: 'Animation',
-      caption: 'A 2D character animation sequence showcasing dynamic movement, expressive character acting, and frame-by-frame motion.',
+      title: 'Ball Animation',
+      caption: 'A 2D ball animation sequence showcasing dynamic movement, expressive character acting, and frame-by-frame motion.',
       videoSrc: animationVideo,
+       thumbnail: animationThumbnail,
     },
   ];
 
