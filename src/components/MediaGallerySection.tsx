@@ -204,16 +204,11 @@ export function MediaGallerySection() {
                     onClick={() => openPlayer(item.videoSrc as string)}
                     className="w-full h-full bg-black flex items-center justify-center cursor-pointer relative"
                   >
-                    {/* show generated poster if available */}
-                    {posters[item.title] ? (
-                      <img
-                        src={posters[item.title]}
-                        alt={`${item.title} poster`}
-                        className="absolute inset-0 w-full h-full object-cover"
+                     <img
+                      src={(item as any).thumbnail}
+                      alt={`${item.title} thumbnail`}
+                      className="absolute inset-0 w-full h-full object-cover"
                       />
-                    ) : (
-                      <div className="absolute inset-0 bg-black" />
-                    )}
 
                     <div className="absolute inset-0 opacity-70 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="flex flex-col items-center gap-3 z-10">
