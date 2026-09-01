@@ -13,7 +13,10 @@ export function SkillsSectionCinematic() {
       title: 'Creative Skills',
       color: 'amber',
       skills: [
-        { name: 'Content Writing' },
+        { name: 'Directing' },
+        { name: 'Editing ' },
+        { name: 'Script & Screenplay Writing' },
+        { name: 'Color Grading' },
         { name: 'Short Film Production' },
         { name: 'Documentary Production' },
       ],
@@ -35,6 +38,9 @@ export function SkillsSectionCinematic() {
       color: 'purple',
       skills: [
         { name: 'Event Management' },
+        { name: 'Event Operations' },
+        { name: 'Team Coordination' },
+        { name: 'Guest Coordination' },
         { name: 'Crowd & Venue Coordination' },
       ],
     },
@@ -71,7 +77,7 @@ export function SkillsSectionCinematic() {
     <section
       id="skills"
       ref={ref}
-      className="py-24 bg-black relative overflow-hidden"
+      className="py-12 bg-black relative overflow-hidden"
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
