@@ -50,7 +50,7 @@ export function ExperienceSection() {
       event: 'Li and Le (Department Film Festival)',
       role: 'Volunteer',
       date: '2024',
-      location: 'Reva University',
+      location: 'REVA University',
       responsibilities: [
         'Event decoration and ambiance creation',
         'Technical support for screenings',
