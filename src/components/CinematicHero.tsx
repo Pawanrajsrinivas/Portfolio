@@ -28,7 +28,7 @@ export function CinematicHero() {
               transition={{ delay: 0.3 }}
               className="text-5xl md:text-7xl mb-6 text-white"
             >
-              <span className="text-amber-500">P</span>AWAN <span className="text-amber-500">R</span>AJ <span className="text-amber-500">S</span>
+              <span className="text-amber-500">P</span>AWAN <span className="text-amber-500">R</span>AJ <span className="text-amber-500">S</span>RINIVAS
             </motion.h1>
 
             <motion.div
