@@ -54,9 +54,8 @@ export function CinematicNavigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-amber-500">P</span>AWAN{' '}
-              <span className="text-amber-500">R</span>AJ{' '}
-              <span className="text-amber-500">S</span>RINIVAS
+              <span className="text-amber-500 text-2xl font-bold">PRS</span>{' '}
+              
             </motion.a>
 
             {/* Desktop Navigation */}
