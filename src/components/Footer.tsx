@@ -44,25 +44,24 @@ export function Footer() {
             <h4 className="text-white mb-3 text-sm tracking-wider uppercase">
               Quick Links
             </h4>
-            <div className="space-y-2">
-             <a
-               href="/about-us/"
-               className="block text-gray-500 hover:text-white transition-colors"
-                >
-                About Us
-                </a>
+           <div className="space-y-2">
+  <a
+    href="/about-us/"
+    className="block text-gray-500 hover:text-white transition-colors"
+  >
+    About Us
+  </a>
 
   {['About', 'Skills', 'Works', 'Experience', 'Contact'].map((link) => (
-              {['About', 'Skills', 'Works', 'Experience', 'Contact'].map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="block text-gray-500 hover:text-amber-500 text-sm transition-colors"
-                >
-                  {link}
-                </a>
-              ))}
-            </div>
+    <a
+      key={link}
+      href={`#${link.toLowerCase()}`}
+      className="block text-gray-500 hover:text-amber-500 text-sm transition-colors"
+    >
+      {link}
+    </a>
+  ))}
+</div>
           </div>
         </div>
 
