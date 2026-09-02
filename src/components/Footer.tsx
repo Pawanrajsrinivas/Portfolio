@@ -45,6 +45,14 @@ export function Footer() {
               Quick Links
             </h4>
             <div className="space-y-2">
+             <a
+               href="/about-us/"
+               className="block text-gray-500 hover:text-white transition-colors"
+                >
+                About Us
+                </a>
+
+  {['About', 'Skills', 'Works', 'Experience', ...].map((link) => (
               {['About', 'Skills', 'Works', 'Experience', 'Contact'].map((link) => (
                 <a
                   key={link}
