@@ -52,7 +52,7 @@ export function Footer() {
                 About Us
                 </a>
 
-  {['About', 'Skills', 'Works', 'Experience', ...].map((link) => (
+  {['About', 'Skills', 'Works', 'Experience', 'Contact'].map((link) => (
               {['About', 'Skills', 'Works', 'Experience', 'Contact'].map((link) => (
                 <a
                   key={link}
