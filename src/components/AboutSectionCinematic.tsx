@@ -35,7 +35,7 @@ export function AboutSectionCinematic() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12 space-y-6"
         >
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p data-nosnippet className="text-gray-300 text-lg leading-relaxed">
             I’m a 1st-year MA Communication and Journalism student at REVA University, passionate about filmmaking, writing, and visual media. I enjoy turning ideas into stories and exploring different aspects of the filmmaking process from developing concepts and writing to working behind the camera and in the editing room.
           </p>
 
