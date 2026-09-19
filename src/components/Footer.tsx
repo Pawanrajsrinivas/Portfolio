@@ -46,7 +46,7 @@ export function Footer() {
             </h4>
            <div className="space-y-2">
  
-  {['works', 'Skills', 'Experience', 'Contact'].map((link) => (
+  {['Works', 'Skills', 'Experience', 'Contact'].map((link) => (
     <a
       key={link}
       href={`#${link.toLowerCase()}`}
