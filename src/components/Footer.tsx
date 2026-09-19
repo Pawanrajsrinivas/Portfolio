@@ -46,7 +46,7 @@ export function Footer() {
             </h4>
            <div className="space-y-2">
  
-  {['About', 'Skills', 'Works', 'Experience', 'Contact'].map((link) => (
+  {['works', 'Skills', 'Experience', 'Contact'].map((link) => (
     <a
       key={link}
       href={`#${link.toLowerCase()}`}
@@ -59,7 +59,7 @@ export function Footer() {
     href="/about-us/"
     className="block text-gray-500 hover:text-white transition-colors"
   >
-    About Us
+    About
   </a>
 
 </div>
